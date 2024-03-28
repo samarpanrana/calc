@@ -2,8 +2,99 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 body {
     min-height: 100vh;
+    flex-direction: column;
+    border: 1px solid black;
+    font-family: monospace;
+}
+
+.semi-container {
+    background: linear-gradient(lavender, pink);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 4px black;
+    text-align: right;
+}
+
+.container {
+    display: flex;
+    width: 400px;
+    gap: 0.5rem;
+}
+
+.container div {
+    text-align: right;
+}
+
+.buttons div,
+.numbers div,
+.operators div {
+    padding: 0.5rem;
+    box-shadow: 0px 0px 4px black;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.contain-first {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.buttons {
+    display: flex;
+    gap : 0.5rem;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.number {
+    flex-grow: 1;
+    flex-basis: 30%;
+}
+
+.operators {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.operators div {
+    flex-grow: 1;
+}
+
+.ac,
+.zero {
+    flex-basis: 66%;
+    flex-grow: 0;
+}
+
+.modulus,
+.dot {
+    flex-grow: 1;
+    flex-basis: 0%;
 }
