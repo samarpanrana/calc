@@ -2,9 +2,18 @@
 let screen = document.querySelector('.screen');
 let numbers = document.querySelectorAll('.number');
 let operators = document.querySelectorAll('.operators div');
+let ac = document.querySelector('.ac');
 let operationActive = false;
 
 let firstNum, secondNum, operation;
+
+ac.addEventListener("click", (e) => {
+    screen.textContent = ``;
+    firstNum = ``;
+    secondNum = ``;
+    operation = ``;
+    resetEffect();
+})
 
 // OPEATIONS for calc
 function add (firstNum, seconNum) {
